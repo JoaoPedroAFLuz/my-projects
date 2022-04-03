@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
 
-export default function Header() {
+import Button from '../Button';
+import { ThemeContext } from '../../context/ThemeContext';
+
+export default function Header({ title, subtitle }) {
+  const { handleToggleTheme } = useContext(ThemeContext);
+
   return (
     <>
-      <h1>Meus projetos</h1>
-      <span>
-        Seja bem vindo!! Aqui você poderá ver alguns do meus projetos pessoais.
-      </span>
+      <h1>{title}</h1>
+      <span>{subtitle}</span>
+      <br />
+      <Button onClick={handleToggleTheme}>Alterar tema</Button>
       <hr />
     </>
   );
 }
+
+Header.propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+};
