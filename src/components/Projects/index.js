@@ -1,7 +1,7 @@
 import React from 'react';
 
 import PropTypes from 'prop-types';
-export default function Projects({ title, description, link, status }) {
+export default function Projects({ title, description, link, status, likes }) {
   return (
     <>
       <article>
@@ -21,6 +21,7 @@ export default function Projects({ title, description, link, status }) {
 }
 
 Projects.propTypes = {
+  id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
