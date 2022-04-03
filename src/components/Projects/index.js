@@ -1,7 +1,7 @@
 import React from 'react';
 
 import PropTypes from 'prop-types';
-export default function Projects({ title, description, link, status }) {
+export default function Projects({ id, title, description, link, status, likes, onLike }) {
   return (
     <>
       <article>
@@ -14,6 +14,9 @@ export default function Projects({ title, description, link, status }) {
         ) : (
           <strong>{status}</strong>
         )}
+        <br />
+        <small>Curtidas: {likes}  </small>
+        <button onClick={() => onLike(id)}>Curtir</button>
       </article>
       <br />
     </>
@@ -21,8 +24,11 @@ export default function Projects({ title, description, link, status }) {
 }
 
 Projects.propTypes = {
+  id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
   status: PropTypes.string.isRequired,
+  likes: PropTypes.number.isRequired,
+  onLike: PropTypes.func.isRequired
 };
