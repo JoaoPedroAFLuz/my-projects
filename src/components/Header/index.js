@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 
-import Button from '../Button';
 import { ThemeContext } from '../../context/ThemeContext';
+import { Button } from '../Button';
 
-export default function Header({ title, subtitle }) {
+export function Header({ title, subtitle }) {
   const { handleToggleTheme } = useContext(ThemeContext);
 
   return (

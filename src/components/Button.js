@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { ThemeContext } from '../context/ThemeContext';
 
-export default function Button({ onClick, children }) {
+export function Button({ onClick, children }) {
   const { theme } = useContext(ThemeContext);
 
   return (

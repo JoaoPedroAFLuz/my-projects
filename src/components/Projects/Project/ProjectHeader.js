@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function ProjectHeader({ title, description, link, status, likes }) {
+export function ProjectHeader({ title, description, link, status, likes }) {
   return (
     <>
       <strong>{title + ':'}</strong>
@@ -24,5 +24,5 @@ ProjectHeader.propTypes = {
   description: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
   status: PropTypes.string.isRequired,
-  likes: PropTypes.number.isRequired
+  likes: PropTypes.number.isRequired,
 };

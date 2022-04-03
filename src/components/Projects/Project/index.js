@@ -1,11 +1,10 @@
 import React from 'react';
-
 import PropTypes from 'prop-types';
 
-import ProjectHeader from './ProjectHeader';
-import Button from '../../Button';
+import { ProjectHeader } from './ProjectHeader';
+import { Button } from '../../Button';
 
-export default function Project({
+export function Project({
   project: { id, title, description, link, status, likes },
   onLike,
 }) {
