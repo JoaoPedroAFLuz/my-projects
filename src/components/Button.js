@@ -10,8 +10,8 @@ export function Button({ onClick, children }) {
     <button
       onClick={onClick}
       style={{
-        color: theme === 'dark' ? '#fff' : '#000',
-        background: theme === 'dark' ? '#000' : '#fff',
+        color: theme === 'dark' ? '#fff' : '#222',
+        background: theme === 'dark' ? '#222' : '#fff',
       }}
     >
       {children}

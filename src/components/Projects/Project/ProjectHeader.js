@@ -1,20 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { Title, Description, Link, Likes, Status } from './styles.js';
 export function ProjectHeader({ title, description, link, status, likes }) {
   return (
     <>
-      <strong>{title + ':'}</strong>
-      <br />
-      <small>{description}</small>s
-      <br />
+      <Title>{title + ':'}</Title>
+      <Description>{description}</Description>
       {link ? (
-        <a href={link}>Repositório no GitHub</a>
+        <Link href={link} target="_blank">Repositório no GitHub</Link>
       ) : (
-        <strong>{status}</strong>
+        <Status>{status}</Status>
       )}
       <br />
-      <small>Curtidas: {likes} </small>
+      <Likes>Curtidas: {likes} </Likes>
     </>
   );
 }

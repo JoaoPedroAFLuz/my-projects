@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import { ProjectHeader } from './ProjectHeader';
 import { Button } from '../../Button';
+import { Container } from './styles';
+
 
 export function Project({
   project: { id, title, description, link, status, likes },
@@ -10,7 +12,7 @@ export function Project({
 }) {
   return (
     <>
-      <article>
+      <Container status={status}>
         <ProjectHeader
           title={title}
           description={description}
@@ -19,8 +21,7 @@ export function Project({
           likes={likes}
         />
         <Button onClick={() => onLike(id)}>Curtir</Button>
-      </article>
-      <br />
+      </Container>
     </>
   );
 }

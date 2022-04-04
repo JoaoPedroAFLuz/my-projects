@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 
 import { ThemeContext } from '../../context/ThemeContext';
 import { Button } from '../Button';
+import { Title, Subtitle } from './styles';
 
 export function Header({ title, subtitle }) {
   const { handleToggleTheme } = useContext(ThemeContext);
 
   return (
     <>
-      <h1>{title}</h1>
-      <span>{subtitle}</span>
-      <br />
+      <Title>{title}</Title>
+      <Subtitle>{subtitle}</Subtitle>
       <Button onClick={handleToggleTheme}>Alterar tema</Button>
       <hr />
     </>
