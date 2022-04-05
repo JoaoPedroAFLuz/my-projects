@@ -13,7 +13,7 @@ export function ProjectHeader({ title, description, link, status, likes }) {
       ) : (
         <Status>{status}</Status>
       )}
-      <Likes>Curtidas: {likes} </Likes>
+      {status !== 'A fazer' && <Likes>Curtidas: {likes} </Likes>}
     </>
   );
 }

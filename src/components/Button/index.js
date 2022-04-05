@@ -4,7 +4,11 @@ import PropTypes from 'prop-types';
 import { Container } from './styles';
 
 export function Button({ onClick, children }) {
-  return <Container onClick={onClick}>{children}</Container>;
+  return (
+    <Container onClick={onClick}>
+      {children}
+    </Container>
+  );
 }
 
 Button.propTypes = {
