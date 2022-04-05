@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { ProjectHeader } from './ProjectHeader';
-import { Button } from '../../Button';
+import { Button } from '../../../components/Button';
 import { Container } from './styles';
 
 export function Project({
