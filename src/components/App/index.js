@@ -1,19 +1,14 @@
 import React from 'react';
 
+import GlobalStyle from '../../styles/global';
 import { ThemeProvider } from '../../context/ThemeContext';
-import { Header } from '../Header';
-import { Projects } from '../Projects';
+import Layout from '../Layout';
 
 export function App() {
   return (
-    <>
-      <ThemeProvider>
-        <Header
-          title="Meus Projetos"
-          subtitle="Seja bem vindo(a)! Aqui você poderá encontrar informações sobre os meus projetos atuais."
-        />
-        <Projects />
-      </ThemeProvider>
-    </>
+    <ThemeProvider>
+      <GlobalStyle />
+      <Layout />
+    </ThemeProvider>
   );
 }

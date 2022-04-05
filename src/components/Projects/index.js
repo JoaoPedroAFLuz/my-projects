@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import { Project } from './Project';
+import { Container } from './styles';
 
 export function Projects() {
   const [projects, setProjects] = useState([
@@ -35,10 +36,10 @@ export function Projects() {
   }
 
   return (
-    <>
+    <Container>
       {projects.map(project => (
         <Project key={project.id} project={project} onLike={handleLike} />
       ))}
-    </>
+    </Container>
   );
 }

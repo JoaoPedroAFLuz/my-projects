@@ -1,7 +1,21 @@
 import styled from 'styled-components';
 
 export const Container = styled.article`
-  margin-bottom: 24px;
+  background: ${({theme}) => theme.projectBackgroundColor};
+  color: ${({theme}) => theme.textColor};
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border-radius: 10px;
+  h2 {
+    margin: 0 0 8px;
+  }
+  small {
+    opacity: 0.7;
+  }
+  & + article {
+    margin-top: 8px;
+  }
 
   opacity: ${({ status }) => (status === 'A fazer' ? 0.5 : 1)};
 `;
@@ -10,7 +24,6 @@ export const Title = styled.strong``;
 
 export const Description = styled.span`
   display: block;
-  color: #ccc;
 `;
 
 export const Link = styled.a`
@@ -27,7 +40,6 @@ export const Link = styled.a`
 `;
 
 export const Likes = styled.small`
-  color: #ccc;
 `;
 
 export const Status = styled.strong`
