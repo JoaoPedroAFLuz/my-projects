@@ -16,6 +16,15 @@ export function Projects() {
     },
     {
       id: Math.random(),
+      title: 'MyContacts',
+      description:
+        'App para salvar contatos. Eu criei uma API com Node.js e postgres (container no Docker) para salvar as informacões dos contatos e poder passá-las para o front-end que utiliza React JS',
+      link: 'https://github.com/JoaoPedroLuz57/my-contacts',
+      status: 'Em desenvolvimento',
+      likes: 0,
+    },
+    {
+      id: Math.random(),
       title: 'App de restaurante',
       description:
         'App, utilizando spring boot e ionic, de um restaurante onde é possível visualizar o menu e realizar pedidos para receber em casa.',

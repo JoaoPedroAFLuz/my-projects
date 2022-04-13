@@ -13,7 +13,7 @@ export default function Layout() {
       <Nav>
         <Link to="/">Home</Link>
         <Link to="/projects">Projects</Link>
-        <Link to="/projects/:id">Project</Link>
+        {/* <Link to="/projects/:id">Project</Link> */}
       </Nav>
       <Routes />
       {/* <Footer /> */}
